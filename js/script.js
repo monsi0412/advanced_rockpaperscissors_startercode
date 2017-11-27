@@ -1,3 +1,46 @@
+/*global $*/
+
+$(document).ready(function(){
+        
+        
+
+        var computerChoice=Math.floor(Math.random() * 3); 
+        var finalCompChoice= 0;
+        if(computerChoice===0){
+                finalCompChoice="rock";
+        }
+        else if(computerChoice===1){
+                finalCompChoice="paper";
+        }
+        else if(computerChoice===2){
+                finalCompChoice="scissors";
+        }
+        console.log(finalCompChoice);
+        
+        $("#computerMove").append(finalCompChoice);
+        
+
+        $("#shoot").click(function(){
+                var userChoice= $("input").val();   
+                console.log(userChoice);
+                $("#yourMove").append(userChoice);
+                console.log("this is working");
+        if(computerChoice===userChoice){
+                $("#result").append("DRAW");
+        }
+        else {$("#result").append("you win");}                
+        });
+});
+
+   
+   
+
+
+   
+   
+        
+
+
 //Class 1:
         // Fork and clone the repo and set up your project workspace and link files
         // Write HTML for your project

@@ -2,15 +2,15 @@
 <html>
 
   <head>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+      <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="css/style.css" type="text/css" />
       <title>RPS Game</title>
-      <!-- Link CSS here -->
-      
-      <!-- Link JQuery here -->
-      
-      <!-- Link Javascript File here -->
-      
-      <!-- Latest compiled and minified Bootstrap CSS -->
-      
+
   </head>
 
   <body>
@@ -22,14 +22,53 @@
         5. Add divs to record User Choice and Computer Choice.
         6. Add a div to record the Winner.
      -->
-    <div class="container text-center">
-    
-      
-
-
-    
+    <div class="container-fluid text-center">
+      <h1>RPS</h1>
+      <div>
+        <img src="https://futurism.com/wp-content/uploads/2014/05/rock-paper-scissors.jpg" class="img-responsive">
+      </div>
+      <p>
+        <input type="text" name="Choice"/>
+        <button type="button" class="btn btn-primary" id="shoot">SHOOT!</button>
+      </p>
     </div>
+      <div class="row">
+        <div class="col-md-2">
+          
+        </div>
+        <div class="col-md-3">
+          <p id="yourMove">
+            Your Move:
+          </p>
+        </div>
+        <div class="col-md-2">
+          <p>
+            VS
+          </p>
+        </div>
+        <div class="col-md-3">
+          <p id="computerMove">
+            Computer's Move:
+          </p>
+        </div>
+        <div class="col-md-2">
+          
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            
+          </div>
+          <div class="col-md-4">
+            <p id="result">
+              Result:
+            </p>            
+          </div>
+          <div class="col-md-4">
+            
+          </div>
+        </div>
 
+      </div>
   </body>
 
 </html>
