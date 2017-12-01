@@ -1,11 +1,41 @@
 /*global $*/
 
 $(document).ready(function(){
+        // $(".movesDisplay", "#resultsDisplay", "#playAgain").hide();
         
-        
-
+        var userChoice="";
         var computerChoice=Math.floor(Math.random() * 3); 
         var finalCompChoice= 0;
+        
+        function RPS() {
+                if(finalCompChoice===userChoice){
+                        $("#result").append("DRAW");
+                }
+                else if(finalCompChoice==="rock" && userChoice==="scissors"){
+                        $("#result").append("you lose");
+                }
+                else if(finalCompChoice==="rock" && userChoice==="paper"){
+                        $("#result").append("you win");
+                }
+                else if(finalCompChoice==="paper" && userChoice==="scissors"){
+                        $("#result").append("you win");
+                }
+                else if(finalCompChoice==="paper" && userChoice==="rock"){
+                        $("#result").append("you lose");
+                }
+                else if(finalCompChoice==="scissors" && userChoice==="rock"){
+                        $("#result").append("you win");
+                }
+                else if(finalCompChoice==="scissors" && userChoice==="paper"){
+                        $("#result").append("you lose");
+                }
+        }
+        
+        function notValid(){
+                alert("Invalid Input, try again");
+                $("input[type=text], textarea").val("");
+        }
+        
         if(computerChoice===0){
                 finalCompChoice="rock";
         }
@@ -15,21 +45,35 @@ $(document).ready(function(){
         else if(computerChoice===2){
                 finalCompChoice="scissors";
         }
-        console.log(finalCompChoice);
-        
-        $("#computerMove").append(finalCompChoice);
-        
 
+        // $("#shoot").click(function(){
+        //         userChoice=$("input").val();
+        //         $("#yourMove").append(userChoice);
+        //         $("#computerMove").append(finalCompChoice); 
+        //         RPS();
+        // });
+        
         $("#shoot").click(function(){
-                var userChoice= $("input").val();   
-                console.log(userChoice);
+                userChoice=$("#userInput").val();
+                if(userChoice!=="rock" && userChoice!== "paper" && userChoice!== "scissors"){
+                        notValid();
+                }
+                else{
                 $("#yourMove").append(userChoice);
-                console.log("this is working");
-        if(computerChoice===userChoice){
-                $("#result").append("DRAW");
-        }
-        else {$("#result").append("you win");}                
+                $("#computerMove").append(finalCompChoice); 
+                RPS();}
         });
+        
+        $("#userInput").keyup(function(event) {
+                if (event.keyCode === 13) {
+                        $("#shoot").click();
+                }
+                });
+
+        $("#again").click(function(){
+                
+        });
+        
 });
 
    

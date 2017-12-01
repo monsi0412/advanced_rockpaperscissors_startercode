@@ -9,6 +9,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="css/style.css" type="text/css" />
+      <link href="https://fonts.googleapis.com/css?family=Anton|Frijole" rel="stylesheet">
       <title>RPS Game</title>
 
   </head>
@@ -23,52 +24,89 @@
         6. Add a div to record the Winner.
      -->
     <div class="container-fluid text-center">
-      <h1>RPS</h1>
-      <div>
-        <img src="https://futurism.com/wp-content/uploads/2014/05/rock-paper-scissors.jpg" class="img-responsive">
-      </div>
-      <p>
-        <input type="text" name="Choice"/>
-        <button type="button" class="btn btn-primary" id="shoot">SHOOT!</button>
-      </p>
-    </div>
+      <h1 id="heading">R. P. S.</h1>
       <div class="row">
-        <div class="col-md-2">
+        <div class="col-md-12">
+          <img src="https://futurism.com/wp-content/uploads/2014/05/rock-paper-scissors.jpg" class="img-responsive">
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-12" id="spacer">
           
         </div>
-        <div class="col-md-3">
-          <p id="yourMove">
+      </div>
+      
+      <div class="row">
+        <div class="col-md-12">
+          <p>
+            <input type="text" name="Choice" id="userInput"/>
+            <button type="button" class="btn btn-primary" id="shoot">SHOOT!</button>
+          </p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-12" id="spacer">
+          
+        </div>
+      </div>
+      
+      <div class="row" id="movesDisplay">
+        <div class="col-lg-2">
+          
+        </div>
+        <div class="col-lg-3">
+          <p id="yourMove" class="movesDisplay">
             Your Move:
           </p>
         </div>
-        <div class="col-md-2">
-          <p>
+        <div class="col-lg-2">
+          <p id="VS" class="movesDisplay">
             VS
           </p>
         </div>
-        <div class="col-md-3">
-          <p id="computerMove">
+        <div class="col-lg-3">
+          <p id="computerMove" class="movesDisplay">
             Computer's Move:
           </p>
         </div>
-        <div class="col-md-2">
+        <div class="col-lg-2">
+           
+        </div>
+      </div>
+     
+      <div class="row" id="resultsDisplay">
+        <div class="col-md-4">
+            
+        </div>
+        <div class="col-md-4">
+          <p id="result">
+            Result:
+          </p>            
+        </div>
+        <div class="col-md-4">
+           
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md-12" id="spacer">
           
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            
-          </div>
-          <div class="col-md-4">
-            <p id="result">
-              Result:
-            </p>            
-          </div>
-          <div class="col-md-4">
-            
-          </div>
-        </div>
-
       </div>
+      
+      <div class="row" id="playAgain">
+        <div class="col-md-12">
+          <p>
+            <button type="button" class="btn btn-primary" id="again">Play Again</button>
+          </p>
+        </div>
+          
+      </div>
+      
+    </div>
+      
   </body>
 
 </html>

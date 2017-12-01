@@ -1,1 +1,25 @@
+#heading{
+    font-family: 'Frijole', cursive;
+    font-size:72px;
+}
+p{
+    font-family: 'Anton', sans-serif;
+    font-size:24px;
+}
 
+#VS{
+    font-family: 'Frijole', cursive;
+    font-size:48px;
+}
+button{
+    font-family: 'Frijole', cursive;
+}
+#spacer{
+    height:50px;
+}
+
+@media(max-width: 768px) {
+    #heading {
+        font-size: 10px;
+    }
+}
