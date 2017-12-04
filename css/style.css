@@ -1,10 +1,24 @@
+body {
+    background-image: url("https://www.photohdx.com/images/2016/03/dramatic-grunge-painted-wall-background.jpg");
+    background-size:cover;
+    
+}
+
 #heading{
     font-family: 'Frijole', cursive;
     font-size:72px;
+    color:white;
 }
-p{
+p, #pointsLabel{
     font-family: 'Anton', sans-serif;
     font-size:24px;
+    color:white;
+}
+
+#counter{
+    font-family: 'Anton', sans-serif;
+    font-size:24px;
+    text-align: center;
 }
 
 #VS{
@@ -18,8 +32,12 @@ button{
     height:50px;
 }
 
+#counter{
+    width:20px;
+}
+
 @media(max-width: 768px) {
     #heading {
-        font-size: 10px;
+        font-size: 100px;
     }
 }

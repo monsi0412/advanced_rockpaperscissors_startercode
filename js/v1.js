@@ -1,76 +1,51 @@
 /*global $*/
 
 $(document).ready(function(){
-
-        var userChoice;
-        var computerChoice = Math.floor(Math.random() * 3); 
-        var winner;
-        var choices = ["rock", "paper", "scissors"];
-        var finalCompChoice = choices[computerChoice];
-        var userPoints = 0;
-
-console.log(finalCompChoice);
-
+        // $(".movesDisplay", "#resultsDisplay", "#playAgain").hide();
+        
+        var userChoice="";
+        var computerChoice=Math.floor(Math.random() * 3); 
+        var finalCompChoice= 0;
+        
+        function RPS() {
+                if(finalCompChoice===userChoice){
+                        $("#result").append("DRAW");
+                }
+                else if(finalCompChoice==="rock" && userChoice==="scissors"){
+                        $("#result").append("you lose");
+                }
+                else if(finalCompChoice==="rock" && userChoice==="paper"){
+                        $("#result").append("you win");
+                }
+                else if(finalCompChoice==="paper" && userChoice==="scissors"){
+                        $("#result").append("you win");
+                }
+                else if(finalCompChoice==="paper" && userChoice==="rock"){
+                        $("#result").append("you lose");
+                }
+                else if(finalCompChoice==="scissors" && userChoice==="rock"){
+                        $("#result").append("you win");
+                }
+                else if(finalCompChoice==="scissors" && userChoice==="paper"){
+                        $("#result").append("you lose");
+                }
+        }
+        
         function notValid(){
                 alert("Invalid Input, try again");
                 $("input[type=text], textarea").val("");
         }
         
-        function RPS() {
-                if(finalCompChoice===userChoice){
-                        $("#result").append("DRAW");
-                        winner = "none";
-                }
-                else if(finalCompChoice==="rock" && userChoice==="scissors"){
-                        $("#result").append("you lose");
-                        winner = "computer";
-                }
-                else if(finalCompChoice==="rock" && userChoice==="paper"){
-                        $("#result").append("you win");
-                        winner = "user";
-                }
-                else if(finalCompChoice==="paper" && userChoice==="scissors"){
-                        $("#result").append("you win");
-                        winner = "user";
-                }
-                else if(finalCompChoice==="paper" && userChoice==="rock"){
-                        $("#result").append("you lose");
-                        winner = "computer";
-                }
-                else if(finalCompChoice==="scissors" && userChoice==="rock"){
-                        $("#result").append("you win");
-                        winner = "user";
-                }
-                else if(finalCompChoice==="scissors" && userChoice==="paper"){
-                        $("#result").append("you lose");
-                        winner = "computer";
-                }
+        if(computerChoice===0){
+                finalCompChoice="rock";
         }
-        
-        function points(){
-                if(winner==="user"){
-                        userPoints++;
-                        return userPoints;
-                }
+        else if(computerChoice===1){
+                finalCompChoice="paper";
         }
-        
-        function displayResult(){
-                if(winner==="user"){
-                        window.location = "youWin.html";
-                }
-                else if(winner==="computer"){
-                        window.location = "youLose.html";
-                }
+        else if(computerChoice===2){
+                finalCompChoice="scissors";
         }
-        
-        
-        $("#userInput").keyup(function(event) {
-                if (event.keyCode === 13) {
-                        $("#shoot").click();
-                }
-        });
 
-        
         $("#shoot").click(function(){
                 userChoice=$("#userInput").val();
                 userChoice = userChoice.toString().toLowerCase();
@@ -79,16 +54,32 @@ console.log(finalCompChoice);
                 }
                 else{
                 $("#yourMove").append(userChoice);
-                $("#computerMove").append(finalCompChoice);
-                RPS();
-                points();
-                $("#counter").val(userPoints);
-
-                }
-                displayResult();
+                $("#computerMove").append(finalCompChoice); 
+                RPS();}
         });
+        
+        // $("#shoot").one("click", function(){
+        //         userChoice=$("#userInput").val();
+        //         userChoice = userChoice.toString().toLowerCase();
+        //         if(userChoice!=="rock" && userChoice!== "paper" && userChoice!== "scissors"){
+        //                 notValid();
+        //         }
+        //         else{
+        //         $("#yourMove").append(userChoice);
+        //         $("#computerMove").append(finalCompChoice); 
+        //         RPS();}
+        // });
+        
+        $("#userInput").keyup(function(event) {
+                if (event.keyCode === 13) {
+                        $("#shoot").click();
+                }
+                });
 
-
+        $("#again").click(function(){
+                $("#yourMove", "#computerMove").empty();
+        });
+        
 });
 
    
