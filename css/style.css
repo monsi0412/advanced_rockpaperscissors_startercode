@@ -3,6 +3,9 @@ body {
     background-size:cover;
     
 }
+#youWon, #youLost, #Draw{
+    display:none;
+}
 
 #heading{
     font-family: 'Frijole', cursive;
@@ -21,25 +24,27 @@ p, #pointsLabel{
     color:white;
 }
 
-#counter{
+.counter{
     font-family: 'Anton', sans-serif;
     font-size:24px;
     text-align: center;
+    width:20px;
 }
 
-#VS{
+.VS{
     font-family: 'Frijole', cursive;
     font-size:48px;
 }
 button{
     font-family: 'Frijole', cursive;
 }
-#spacer{
-    height:50px;
+
+.again{
+    margin:auto;
 }
 
-#counter{
-    width:20px;
+#spacer{
+    height:50px;
 }
 
 @media(max-width: 768px) {

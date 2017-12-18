@@ -16,15 +16,8 @@
   </head>
 
   <body>
-      <!-- TASK 1: In the div below. 
-        1. In a header tag, add a title.
-        2. In a paragraph tag, add instructions on how to play the game.
-        3. Add a RPS image.
-        4. Add input box and button .
-        5. Add divs to record User Choice and Computer Choice.
-        6. Add a div to record the Winner.
-     -->
-    <div class="container-fluid text-center">
+
+    <div class="container-fluid text-center" id="index">
       <h1 id="heading">R. P. S.</h1>
       <div class="row">
         <div class="col-md-12">
@@ -53,72 +46,189 @@
         </div>
       </div>
       
-      <div class="row" id="movesDisplay">
-        <div class="col-lg-2">
-          
-        </div>
-        <div class="col-lg-3">
-          <p id="yourMove" class="movesDisplay">
-            Your Move:
-          </p>
-        </div>
-        <div class="col-lg-2">
-          <p id="VS" class="movesDisplay">
-            VS
-          </p>
-        </div>
-        <div class="col-lg-3">
-          <p id="computerMove" class="movesDisplay">
-            Computer's Move:
-          </p>
-        </div>
-        <div class="col-lg-2">
-           
-        </div>
-      </div>
+      
 
-      <div class="row" id="pointsDisplay">
+      <div class="row pointsDisplay">
         <div class="col-md-4">
         </div>
         <div class="col-md-4">
           <label for = "counter" id="pointsLabel">Points: </label>
-          <input id="counter" value = "0" readonly="readonly"/>          
+          <input class="counter" value = "0" readonly="readonly"/>          
         </div>
         <div class="col-md-4">
            
         </div>
       </div>
-
- 
-      <div class="row" id="resultsDisplay">
-        <div class="col-md-4">
+  
+    </div>
+    
+    
+    <div id="youWon" class="container-fluid">
+        <h1>
+            YOU WIN!!!
+        </h1>
+        <div class="row pointsDisplay">
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-4">
+            <label for = "counter" id="pointsLabel">Points: </label>
+            <input class="counter" value = "0" readonly="readonly"/>          
+          </div>
+          <div class="col-md-4">
+             
+          </div>
+        </div>
+        <div class="row movesDisplay">
+          <div class="col-lg-2">
+            
+          </div>
+          <div class="col-lg-3">
+            <p  class="movesDisplay">
+              Your Move: <span class="yourMove"> </span>
+            </p>
+          </div>
+          <div class="col-lg-2">
+            <p class="movesDisplay VS">
+              VS
+            </p>
+          </div>
+          <div class="col-lg-3">
+            <p class="movesDisplay">
+              Computer's Move: <span class="computerMove" ></span>
+            </p>
+          </div>
+          <div class="col-lg-2">
+             
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            
+          </div>
+          <div class="col-md-4">
+            <p>
+              <button type="button" class="btn btn-primary again" >
+                  Try Again
+              </button>
+            </p>
+          </div>
+          <div class="col-md-4">
+            
+          </div>
+      </div>
+    </div>
+    
+    
+    <div id="youLost" class="container-fluid">
+        <h1>
+            YOU LOSE 
+        </h1>
+        <div class="row pointsDisplay">
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-4">
+            <label for = "counter" id="pointsLabel">Points: </label>
+            <input class="counter" value = "0" readonly="readonly"/>          
+          </div>
+          <div class="col-md-4">
+             
+          </div>
+      </div>
+        <div class="row movesDisplay">
+          <div class="col-lg-2">
+          
+          </div>
+          <div class="col-lg-3">
+            <p  class="movesDisplay">
+              Your Move: <span class="yourMove"> </span>
+            </p>
+          </div>
+          <div class="col-lg-2">
+            <p class="movesDisplay VS">
+              VS
+            </p>
+          </div>
+          <div class="col-lg-3">
+            <p class="movesDisplay">
+              Computer's Move: <span class="computerMove" ></span>
+            </p>
+          </div>
+          <div class="col-lg-2">
+             
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            
+          </div>
+          <div class="col-md-4">
+            <p>
+              <button type="button" class="btn btn-primary again" >
+                  Try Again
+              </button>
+            </p>
+          </div>
+          <div class="col-md-4">
+            
+          </div>
             
         </div>
-        <div class="col-md-4">
-          <p id="result">
-            Result:
-          </p>            
+    </div>
+    
+    <div id="Draw" class="container-fluid">
+        <h1>
+            DRAW
+        </h1>
+        <div class="row pointsDisplay">
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-4">
+            <label for = "counter" id="pointsLabel">Points: </label>
+            <input class="counter" value = "0" readonly="readonly"/>          
+          </div>
+          <div class="col-md-4">
+             
+          </div>
         </div>
-        <div class="col-md-4">
-           
+        <div class="row movesDisplay">
+          <div class="col-lg-2">
+            
+          </div>
+          <div class="col-lg-3">
+            <p  class="movesDisplay">
+              Your Move: <span class="yourMove"> </span>
+            </p>
+          </div>
+          <div class="col-lg-2">
+            <p class="movesDisplay VS">
+              VS
+            </p>
+          </div>
+          <div class="col-lg-3">
+            <p class="movesDisplay">
+              Computer's Move: <span class="computerMove" ></span>
+            </p>
+          </div>
+          <div class="col-lg-2">
+             
+          </div>
         </div>
-      </div>
-      
-      <div class="row">
-        <div class="col-md-12" id="spacer">
-          
+        <div class="row">
+          <div class="col-md-4">
+            
+          </div>
+          <div class="col-md-4">
+            <p>
+              <button type="button" class="btn btn-primary again" >
+                  Try Again
+              </button>
+            </p>
+          </div>
+          <div class="col-md-4">
+            
+          </div>
         </div>
-      </div>
-      
-      <div class="row" id="playAgain">
-        <div class="col-md-12">
-          <p>
-            <button type="button" class="btn btn-primary" id="again">Play Again</button>
-          </p>
-        </div>
-          
-      </div>
-      
+        
     </div>
       
   </body>
