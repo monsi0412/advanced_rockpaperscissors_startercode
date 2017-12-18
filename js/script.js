@@ -85,7 +85,7 @@ console.log(finalCompChoice);
                 $("#counter").val(userPoints);
 
                 }
-                displayResult();
+                displayResult().delay(4000);
         });
 
 

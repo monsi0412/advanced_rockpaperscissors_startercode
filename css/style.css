@@ -9,6 +9,12 @@ body {
     font-size:72px;
     color:white;
 }
+h1{
+    font-family: 'Frijole', cursive;
+    font-size:72px;
+    color:white;
+    text-align: center;
+}
 p, #pointsLabel{
     font-family: 'Anton', sans-serif;
     font-size:24px;
